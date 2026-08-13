@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.8fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
-            <Link href="#home" className="inline-block">
+            <Link href="/#home" className="inline-block">
               <div className="rounded-xl bg-white px-4 py-3">
                 <img
                   src="/images/logo/vrm-green-nursery.png"
