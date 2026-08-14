@@ -158,10 +158,10 @@ const varieties = [
     category: "Hybrid Coconut",
 
     images: [
+      "/images/varieties/ganga/04.jpg",
       "/images/varieties/ganga/01.jpg",
       "/images/varieties/ganga/02.jpg",
       "/images/varieties/ganga/03.jpg",
-      "/images/varieties/ganga/04.jpg",
     ],
 
     shortDescription:
@@ -360,9 +360,9 @@ const varieties = [
     category: "Dwarf Coconut",
 
     images: [
+      "/images/varieties/kalpasree/03.jpg",
       "/images/varieties/kalpasree/01.jpg",
       "/images/varieties/kalpasree/02.jpg",
-      "/images/varieties/kalpasree/03.jpg",
     ],
 
     shortDescription:

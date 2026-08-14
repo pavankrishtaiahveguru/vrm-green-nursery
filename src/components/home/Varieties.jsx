@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   FiArrowRight,
@@ -16,7 +17,6 @@ import {
 } from "react-icons/fi";
 
 import varieties from "@/data/varieties";
-import Link from "next/link";
 
 const getFeatureIcon = (label = "") => {
   const value = label.toLowerCase();
@@ -93,7 +93,7 @@ export default function Varieties() {
         <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#66C4CE]/10 blur-3xl" />
         <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#0DA855]/10 blur-3xl" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -120,7 +120,7 @@ export default function Varieties() {
           </motion.div>
 
           {/* Variety Cards */}
-          <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-2 items-stretch gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-3 lg:gap-7">
             {varieties.map((variety, index) => {
               const productionFeature = variety.keyFeatures?.find((feature) =>
                 /yield|production/i.test(feature.label),
@@ -140,41 +140,41 @@ export default function Varieties() {
                     duration: 0.65,
                     delay: index * 0.08,
                   }}
-                  className="group overflow-hidden rounded-2xl border border-[#E3ECE7] bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0DA855]/20 hover:shadow-xl hover:shadow-[#173026]/8"
+                  className="group flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[#E3ECE7] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#0DA855]/20 hover:shadow-lg hover:shadow-[#173026]/8 sm:rounded-2xl sm:hover:-translate-y-2"
                 >
                   {/* Image */}
-                  <div className="relative h-[320px] overflow-hidden sm:h-[340px]">
+                  <div className="relative h-[190px] shrink-0 overflow-hidden sm:h-[300px] lg:h-[340px]">
                     <Image
                       src={variety.images?.[0]}
                       alt={variety.name}
                       fill
-                      sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 30vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/55 via-transparent to-transparent" />
 
                     {/* Category */}
-                    <div className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/90 px-3 py-1.5 text-xs font-semibold text-[#0DA855] shadow-sm backdrop-blur-md">
+                    <div className="absolute left-2.5 top-2.5 max-w-[55%] truncate rounded-full border border-white/30 bg-white/90 px-2 py-1 text-[7px] font-semibold text-[#0DA855] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:max-w-none sm:px-3 sm:py-1.5 sm:text-xs">
                       {variety.category}
                     </div>
 
                     {/* Image Count */}
                     {variety.images?.length > 1 && (
-                      <div className="absolute right-4 top-4 rounded-full bg-[#173026]/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
+                      <div className="absolute right-2.5 top-2.5 rounded-full bg-[#173026]/75 px-2 py-1 text-[7px] font-semibold text-white backdrop-blur-md sm:right-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-xs">
                         {variety.images.length} Photos
                       </div>
                     )}
 
-                    {/* Production */}
+                    {/* Production Info */}
                     {productionFeature && (
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <div className="rounded-xl border border-white/20 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#587067]">
+                      <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4">
+                        <div className="rounded-lg border border-white/20 bg-white/90 px-2.5 py-2 shadow-lg backdrop-blur-md sm:rounded-xl sm:px-4 sm:py-3">
+                          <p className="text-[6px] font-semibold uppercase tracking-[0.08em] text-[#587067] sm:text-[10px] sm:tracking-[0.12em]">
                             {productionFeature.label}
                           </p>
 
-                          <p className="mt-1 text-sm font-bold text-[#EF8228]">
+                          <p className="mt-0.5 line-clamp-2 text-[7px] font-bold leading-3 text-[#EF8228] sm:mt-1 sm:text-sm sm:leading-5">
                             {productionFeature.value}
                           </p>
                         </div>
@@ -182,62 +182,75 @@ export default function Varieties() {
                     )}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-5 sm:p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#EF8228]">
+                  {/* Card Content */}
+                  <div className="flex flex-1 flex-col p-3 sm:p-6">
+                    {/* Subtitle */}
+                    <p className="min-h-[24px] text-[9px] font-semibold uppercase leading-3 tracking-[0.1em] text-[#EF8228] sm:min-h-[32px] sm:text-xs sm:leading-5 sm:tracking-[0.15em]">
                       {variety.subtitle}
                     </p>
 
-                    <h3 className="mt-2 text-2xl font-bold text-[#173026]">
+                    {/* Title */}
+                    <h3 className="mt-1.5 min-h-[40px] text-base font-bold leading-tight text-[#173026] sm:mt-2 sm:min-h-[58px] sm:text-2xl sm:leading-8">
                       {variety.name}
                     </h3>
 
-                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-[#587067]">
+                    {/* Description */}
+                    <p className="mt-2 min-h-[48px] line-clamp-3 text-[10px] leading-4 text-[#587067] sm:mt-3 sm:min-h-[72px] sm:text-sm sm:leading-6">
                       {variety.shortDescription}
                     </p>
 
                     {/* Quick Info */}
-                    <div className="mt-5 grid grid-cols-2 gap-2">
-                      <div className="rounded-xl bg-[#F2FAF5] p-3">
-                        <p className="text-[10px] uppercase tracking-wide text-[#587067]">
+                    <div className="mt-3 grid grid-cols-2 items-stretch gap-1.5 sm:mt-5 sm:gap-2">
+                      {/* Category */}
+                      <div className="flex min-h-[76px] flex-col rounded-lg bg-[#F2FAF5] p-2 sm:min-h-[100px] sm:rounded-xl sm:p-3">
+                        <p className="text-[8px] uppercase tracking-wide text-[#587067] sm:text-[10px]">
                           Category
                         </p>
-                        <p className="mt-1 text-xs font-semibold text-[#173026]">
+
+                        <p className="mt-0.5 line-clamp-2 text-[9px] font-semibold leading-3 text-[#173026] sm:mt-1 sm:text-xs sm:leading-normal">
                           {variety.category}
                         </p>
                       </div>
 
+                      {/* Water / Photos */}
                       {waterFeature ? (
-                        <div className="rounded-xl bg-[#F1FBFD] p-3">
-                          <p className="text-[10px] uppercase tracking-wide text-[#587067]">
+                        <div className="flex min-h-[76px] flex-col rounded-lg bg-[#F1FBFD] p-2 sm:min-h-[100px] sm:rounded-xl sm:p-3">
+                          <p className="line-clamp-2 text-[8px] uppercase leading-3 tracking-wide text-[#587067] sm:text-[10px] sm:leading-4">
                             {waterFeature.label}
                           </p>
-                          <p className="mt-1 text-xs font-semibold text-[#1593A0]">
+
+                          <p className="mt-0.5 line-clamp-2 text-[9px] font-semibold leading-3 text-[#1593A0] sm:mt-1 sm:text-xs sm:leading-normal">
                             {waterFeature.value}
                           </p>
                         </div>
                       ) : (
-                        <div className="rounded-xl bg-[#FFF5EB] p-3">
-                          <p className="text-[10px] uppercase tracking-wide text-[#587067]">
+                        <div className="flex min-h-[76px] flex-col rounded-lg bg-[#FFF5EB] p-2 sm:min-h-[100px] sm:rounded-xl sm:p-3">
+                          <p className="text-[8px] uppercase tracking-wide text-[#587067] sm:text-[10px]">
                             Photos
                           </p>
-                          <p className="mt-1 text-xs font-semibold text-[#EF8228]">
+
+                          <p className="mt-0.5 text-[9px] font-semibold text-[#EF8228] sm:mt-1 sm:text-xs">
                             {variety.images?.length || 0} Images
                           </p>
                         </div>
                       )}
                     </div>
 
-                    {/* View Details */}
+                    {/* View Details Button */}
                     <button
                       type="button"
                       onClick={() => openVariety(variety)}
-                      className="group/button mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[#0DA855] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#087F40]"
+                      className="group/button mt-auto flex min-h-[42px] w-full items-center justify-center gap-1.5 rounded-full bg-[#0DA855] px-3 py-2.5 text-[10px] font-semibold text-white transition-all duration-300 hover:bg-[#087F40] sm:min-h-[52px] sm:gap-2 sm:px-5 sm:py-3 sm:text-sm"
                     >
-                      View Full Details
+                      <span className="hidden sm:inline">
+                        View Full Details
+                      </span>
+
+                      <span className="sm:hidden">View Details</span>
+
                       <FiArrowRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover/button:translate-x-1"
+                        size={13}
+                        className="transition-transform duration-300 group-hover/button:translate-x-1 sm:h-4 sm:w-4"
                       />
                     </button>
                   </div>
@@ -252,7 +265,7 @@ export default function Varieties() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mx-auto mt-12 max-w-3xl rounded-2xl border border-[#0DA855]/10 bg-white p-5 text-center shadow-sm sm:p-6"
+            className="mx-auto mt-10 max-w-3xl rounded-2xl border border-[#0DA855]/10 bg-white p-5 text-center shadow-sm sm:mt-12 sm:p-6"
           >
             <p className="text-sm leading-6 text-[#587067]">
               Looking for a particular coconut variety or need help choosing the
@@ -263,7 +276,6 @@ export default function Varieties() {
               href="/contact"
               className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#0DA855] transition-colors hover:text-[#EF8228]"
             >
-             
               Contact VRM Green Nursery
               <FiArrowRight size={15} />
             </Link>
@@ -284,7 +296,7 @@ export default function Varieties() {
               exit={{ opacity: 0, scale: 0.96, y: 20 }}
               transition={{ duration: 0.3 }}
               onClick={(event) => event.stopPropagation()}
-              className="relative max-h-[94vh] w-full max-w-6xl overflow-y-auto rounded-2xl bg-white shadow-2xl sm:rounded-[2rem]"
+              className="relative max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-2xl bg-white shadow-2xl sm:rounded-[2rem]"
             >
               {/* Close Button */}
               <button
@@ -299,7 +311,8 @@ export default function Varieties() {
               <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
                 {/* Gallery */}
                 <div className="bg-[#F2FAF5] p-3 sm:p-5 lg:p-6">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white sm:aspect-[4/4.5] lg:aspect-[4/5]">
+                  <div className="relative h-[420px] overflow-hidden rounded-2xl bg-white sm:h-[500px] lg:h-[620px]">
+                    {" "}
                     <Image
                       src={
                         selectedVariety.images?.[activeImage] ||
@@ -310,9 +323,7 @@ export default function Varieties() {
                       sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover"
                     />
-
                     <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/40 via-transparent to-transparent" />
-
                     {/* Image Counter */}
                     {selectedVariety.images?.length > 1 && (
                       <div className="absolute bottom-4 right-4 rounded-full bg-[#173026]/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
@@ -459,7 +470,7 @@ export default function Varieties() {
                     </div>
                   )}
 
-                  {/* Yield / Performance Note */}
+                  {/* Important Note */}
                   {selectedVariety.note && (
                     <div className="mt-5 flex items-start gap-3 rounded-2xl border border-[#EF8228]/15 bg-[#FFF5EB] p-4">
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EF8228]/10 text-[#EF8228]">
