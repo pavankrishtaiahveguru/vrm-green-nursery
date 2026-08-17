@@ -92,9 +92,7 @@ ${form.quantity.trim() ? `Quantity: ${form.quantity.trim()}` : ""}
 ${form.message.trim() || "No additional message."}
 
 ━━━━━━━━━━━━━━━━
-VRM Green Nursery
-📞 8985532945
-📍 Madurai, Thirumangalam Road – 625008
+
     `.trim();
 
     const whatsappUrl = `https://wa.me/918985532945?text=${encodeURIComponent(
