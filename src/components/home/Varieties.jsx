@@ -156,7 +156,7 @@ export default function Varieties() {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/55 via-transparent to-transparent" />
                   </div>
-
+                  {/*  */}
                   {/* Card Content */}
                   <div className="flex flex-1 flex-col p-3 sm:p-6">
                     {/* Subtitle */}
