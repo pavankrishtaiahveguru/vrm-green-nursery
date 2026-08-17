@@ -149,38 +149,12 @@ export default function Varieties() {
                       src={variety.images?.[0]}
                       alt={variety.name}
                       fill
+                      loading="eager"
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/55 via-transparent to-transparent" />
-
-                    {/* Category */}
-                    {/* <div className="absolute left-2.5 top-2.5 max-w-[55%] truncate rounded-full border border-white/30 bg-white/90 px-2 py-1 text-[7px] font-semibold text-[#0DA855] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:max-w-none sm:px-3 sm:py-1.5 sm:text-xs">
-                      {variety.category}
-                    </div> */}
-
-                    {/* Image Count */}
-                    {/* {variety.images?.length > 1 && (
-                      <div className="absolute right-2.5 top-2.5 rounded-full bg-[#173026]/75 px-2 py-1 text-[7px] font-semibold text-white backdrop-blur-md sm:right-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-xs">
-                        {variety.images.length} Photos
-                      </div>
-                    )} */}
-
-                    {/* Production Info */}
-                    {/* {productionFeature && (
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4">
-                        <div className="rounded-lg border border-white/20 bg-white/90 px-2.5 py-2 shadow-lg backdrop-blur-md sm:rounded-xl sm:px-4 sm:py-3">
-                          <p className="text-[6px] font-semibold uppercase tracking-[0.08em] text-[#587067] sm:text-[10px] sm:tracking-[0.12em]">
-                            {productionFeature.label}
-                          </p>
-
-                          <p className="mt-0.5 line-clamp-2 text-[7px] font-bold leading-3 text-[#EF8228] sm:mt-1 sm:text-sm sm:leading-5">
-                            {productionFeature.value}
-                          </p>
-                        </div>
-                      </div>
-                    )} */}
                   </div>
 
                   {/* Card Content */}
@@ -194,6 +168,19 @@ export default function Varieties() {
                     <h3 className="mt-1.5 min-h-[40px] text-base font-bold leading-tight text-[#173026] sm:mt-2 sm:min-h-[58px] sm:text-2xl sm:leading-8">
                       {variety.name}
                     </h3>
+
+                    {/* Plant Price */}
+                    {variety.price != null && (
+                      <div className="mt-2 flex items-center justify-between">
+                        <span className="text-[10px] font-bold uppercase tracking-wide text-[#587067] sm:text-xs">
+                          Plant Price
+                        </span>
+
+                        <span className="text-base font-bold text-[#0DA855] sm:text-lg">
+                          ₹{variety.price}
+                        </span>
+                      </div>
+                    )}
 
                     {/* Description */}
                     <p className="mt-2 min-h-[48px] line-clamp-3 text-[10px] leading-4 text-[#587067] sm:mt-2 sm:min-h-[72px] sm:text-sm sm:leading-6">
@@ -383,6 +370,18 @@ export default function Varieties() {
                   <p className="mt-2 text-sm font-medium text-[#0DA855]">
                     {selectedVariety.subtitle}
                   </p>
+
+                  {/* Plant Price */}
+                  {selectedVariety.price != null && (
+                    <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#F2FAF5] px-4 py-2">
+                      <span className="text-sm font-bold text-[#587067]">
+                        Plant Price
+                      </span>
+                      <span className="text-lg font-bold text-[#0DA855]">
+                        ₹{selectedVariety.price}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Description */}
                   <div className="mt-5">

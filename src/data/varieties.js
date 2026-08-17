@@ -4,6 +4,7 @@ const varieties = [
     name: "Chandra Shankara",
     subtitle: "Dwarf × Tall Hybrid Coconut",
     category: "Hybrid Coconut",
+    price: 500,
 
     images: [
       "/images/varieties/chandra-shankara/01.jpg",
@@ -85,6 +86,7 @@ const varieties = [
     name: "D × T Coconut",
     subtitle: "Dwarf × Tall Hybrid",
     category: "Hybrid Coconut",
+    price: 450,
 
     images: [
       "/images/varieties/d-t-coconut/02.jpg",
@@ -156,6 +158,7 @@ const varieties = [
     name: "Ganga Coconut",
     subtitle: "Gangabandam × West Coast Tall",
     category: "Hybrid Coconut",
+    price: 550,
 
     images: [
       "/images/varieties/ganga/04.jpg",
@@ -222,6 +225,7 @@ const varieties = [
     shortName: "MGD",
     subtitle: "Green Dwarf Coconut",
     category: "Dwarf Coconut",
+    price: 350,
 
     images: [
       "/images/varieties/malaysian-green-dwarf/01.jpg",
@@ -293,6 +297,7 @@ const varieties = [
     name: "COD Coconut",
     subtitle: "Chowghat Orange Dwarf",
     category: "Dwarf Coconut",
+    price: 400,
 
     images: [
       "/images/varieties/cod/01.jpg",
@@ -358,6 +363,7 @@ const varieties = [
     name: "Kalpasree Coconut",
     subtitle: "Improved Dwarf Coconut",
     category: "Dwarf Coconut",
+    price: 400,
 
     images: [
       "/images/varieties/kalpasree/03.jpg",
