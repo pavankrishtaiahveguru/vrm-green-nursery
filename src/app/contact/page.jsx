@@ -16,6 +16,7 @@ import {
   FiYoutube,
 } from "react-icons/fi";
 import CTA from "@/components/common/CTA";
+import { FaWhatsapp } from "react-icons/fa";
 
 const initialForm = {
   name: "",
@@ -182,7 +183,7 @@ VRM Green Nursery
                   <p className="text-xs font-medium text-[#7B8D84]">Phone</p>
 
                   <p className="mt-1 text-sm font-semibold text-[#173026]">
-                    8985532945
+                   +91 89855 32945
                   </p>
                 </div>
               </a>
@@ -467,6 +468,7 @@ VRM Green Nursery
                     </>
                   ) : (
                     <>
+                    <FaWhatsapp size={20} />
                       Send Enquiry on WhatsApp
                       <FiSend size={16} />
                     </>
@@ -502,6 +504,7 @@ VRM Green Nursery
                 href="tel:8985532945"
                 className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#EF8228] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#D96F19]"
               >
+                <FiPhone size={16}/>
                 Call for Directions
                 <FiArrowRight size={16} />
               </a>

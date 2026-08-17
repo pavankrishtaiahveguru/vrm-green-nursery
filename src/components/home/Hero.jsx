@@ -78,7 +78,7 @@ export default function Hero() {
               href="#varieties"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#0DA855] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#0DA855]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#087F40] hover:shadow-xl"
             >
-              Explore Varieties
+             🌴 Explore Varieties
               <FaArrowRight
                 size={17}
                 className="transition-transform duration-300 group-hover:translate-x-1"

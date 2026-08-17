@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiArrowRight, FiMapPin, FiPhone, FiNavigation } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function DemoFarm() {
   return (
@@ -47,8 +48,8 @@ export default function DemoFarm() {
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#EF8228]">
-                    Farm Location
+                  <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#EF8228]">
+                    Demo Farm Location
                   </p>
 
                   <h3 className="mt-1 text-xl font-bold text-[#173026]">
@@ -118,6 +119,7 @@ Thank you.`,
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white bg-white/25 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0DA855]"
                 >
+                  <FaWhatsapp size={16} />
                   WhatsApp
                   <FiArrowRight size={16} />
                 </a>

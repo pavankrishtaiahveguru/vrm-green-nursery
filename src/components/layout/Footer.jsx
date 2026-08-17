@@ -135,7 +135,7 @@ export default function Footer() {
                 <span>
                   <span className="block text-xs text-white/45">Phone</span>
                   <span className="mt-1 block text-sm font-medium text-white transition-colors group-hover:text-[#66C4CE]">
-                    8985532945
+                    +91 89855 32945
                   </span>
                 </span>
               </a>

@@ -11,7 +11,9 @@ import {
   FiSettings,
   FiTruck,
   FiTrendingUp,
+  FiPhone,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const services = [
   {
@@ -186,14 +188,16 @@ export default function Services() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0DA855] px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#087F40]"
               >
+                <FaWhatsapp size={18} />
                 WhatsApp Us
                 <FiArrowRight size={16} />
               </a>
 
               <a
                 href="tel:8985532945"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-[#EF8228] hover:bg-[#EF8228]"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3.5 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(13,168,85,0.18)] transition-all duration-300 hover:border-[#EF8228] hover:bg-[#EF8228] hover:shadow-[0_4px_14px_rgba(239,130,40,0.20)]"
               >
+                <FiPhone size={15} />
                 Call Now
               </a>
             </div>

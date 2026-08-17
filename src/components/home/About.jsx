@@ -153,9 +153,9 @@ export default function About() {
 
               <a
                 href="#varieties"
-                className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#E3ECE7] bg-white px-5 py-3 text-sm font-semibold text-[#173026] transition-all duration-300 hover:border-[#EF8228] hover:text-[#EF8228]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#0DA855] bg-[#F2FAF5] px-5 py-3 text-sm font-semibold text-[#173026] shadow-[inset_0_0_6px_rgba(13,168,85,0.10),inset_0_0_14px_rgba(13,168,85,0.06)] transition-all duration-300 hover:border-[#EF8228] hover:bg-[#FFF7F0] hover:text-[#EF8228] hover:shadow-[inset_0_0_6px_rgba(239,130,40,0.12),inset_0_0_14px_rgba(239,130,40,0.07)]"
               >
-                Explore Varieties
+                🌴 Explore Varieties
                 <FiArrowUpRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

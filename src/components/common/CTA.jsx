@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiArrowRight, FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function CTA() {
   const whatsappMessage =
@@ -49,6 +50,7 @@ export default function CTA() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0DA855] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#087F40] hover:shadow-lg"
               >
+                <FaWhatsapp size={18} />
                 WhatsApp Us
                 <FiArrowRight size={16} />
               </a>
