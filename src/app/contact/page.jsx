@@ -92,6 +92,8 @@ ${form.quantity.trim() ? `Quantity: ${form.quantity.trim()}` : ""}
 ${form.message.trim() || "No additional message."}
 
 ━━━━━━━━━━━━━━━━
+Thank you for contacting VRM Green Nursery! 🌴
+We will get back to you shortly.
 
     `.trim();
 
