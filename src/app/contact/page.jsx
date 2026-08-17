@@ -162,7 +162,7 @@ VRM Green Nursery
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-xs font-medium text-[#7B8D84]">Email</p>
+                  <p className="text-sm font-medium text-[#7B8D84]">Email</p>
 
                   <p className="mt-1 break-all text-sm font-semibold text-[#173026]">
                     vrmgreennursery@gmail.com
@@ -180,10 +180,10 @@ VRM Green Nursery
                 </div>
 
                 <div>
-                  <p className="text-xs font-medium text-[#7B8D84]">Phone</p>
+                  <p className="text-sm font-medium text-[#7B8D84]">Phone</p>
 
                   <p className="mt-1 text-sm font-semibold text-[#173026]">
-                   +91 89855 32945
+                    +91 89855 32945
                   </p>
                 </div>
               </a>
@@ -196,14 +196,14 @@ VRM Green Nursery
                   </div>
 
                   <div>
-                    <p className="text-xs font-medium text-[#7B8D84]">
+                    <p className="text-sm font-medium text-[#7B8D84]">
                       Nursery Address
                     </p>
 
                     <p className="mt-1 text-sm font-semibold leading-6 text-[#173026]">
-                      Madurai,
+                      Tirumangalam Road, Kappalur
                       <br />
-                      Thirumangalam Road – 625008
+                      Madurai – 625008, Tamil Nadu
                     </p>
                   </div>
                 </div>
@@ -217,8 +217,8 @@ VRM Green Nursery
                   </div>
 
                   <div>
-                    <p className="text-xs font-medium text-[#7B8D84]">
-                      Demo Farm
+                    <p className="text-sm font-medium text-[#7B8D84]">
+                      Visit Our Demo Farm
                     </p>
 
                     <p className="mt-1 text-sm font-semibold leading-6 text-[#173026]">
@@ -245,7 +245,7 @@ VRM Green Nursery
                   </div>
 
                   <div className="flex-1">
-                    <p className="text-xs font-medium text-[#7B8D84]">
+                    <p className="text-sm font-medium text-[#7B8D84]">
                       Business Hours
                     </p>
 
@@ -264,7 +264,7 @@ VRM Green Nursery
 
               {/* Social Media */}
               <div className="rounded-2xl border border-[#E1EAE4] bg-white p-5 shadow-sm">
-                <p className="text-xs font-medium text-[#7B8D84]">
+                <p className="text-sm font-medium text-[#7B8D84]">
                   Follow VRM Green Nursery
                 </p>
 
@@ -468,7 +468,7 @@ VRM Green Nursery
                     </>
                   ) : (
                     <>
-                    <FaWhatsapp size={20} />
+                      <FaWhatsapp size={20} />
                       Send Enquiry on WhatsApp
                       <FiSend size={16} />
                     </>
@@ -504,7 +504,7 @@ VRM Green Nursery
                 href="tel:8985532945"
                 className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#EF8228] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#D96F19]"
               >
-                <FiPhone size={16}/>
+                <FiPhone size={16} />
                 Call for Directions
                 <FiArrowRight size={16} />
               </a>

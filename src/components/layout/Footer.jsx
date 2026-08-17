@@ -164,9 +164,9 @@ export default function Footer() {
                     Nursery Address
                   </span>
                   <span className="mt-1 block text-sm leading-6 text-white/80">
-                    Madurai, Thirumangalam Road
+                    Tirumangalam Road, Kappalur, 
                     <br />
-                    625008
+                    Madurai – 625008, Tamil Nadu
                   </span>
                 </span>
               </div>

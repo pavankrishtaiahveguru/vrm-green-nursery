@@ -88,9 +88,11 @@ export default function About() {
                     Nursery Location
                   </p>
                   <p className="mt-1 text-sm font-medium leading-5 text-[#173026]">
-                    Madurai, Thirumangalam Road
+                    Tirumangalam Road, Kappalur, 
                   </p>
-                  <p className="text-xs text-[#587067]">625008</p>
+                  <p className="text-sm text-[#587067]">
+                    Madurai – 625008, Tamil Nadu
+                  </p>
                 </div>
               </div>
             </motion.div>

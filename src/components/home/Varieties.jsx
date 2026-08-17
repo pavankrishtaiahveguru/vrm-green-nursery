@@ -17,6 +17,7 @@ import {
 } from "react-icons/fi";
 
 import varieties from "@/data/varieties";
+import { FaWhatsapp } from "react-icons/fa";
 
 const getFeatureIcon = (label = "") => {
   const value = label.toLowerCase();
@@ -499,6 +500,7 @@ export default function Varieties() {
                       rel="noopener noreferrer"
                       className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0DA855] px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#087F40]"
                     >
+                      <FaWhatsapp size={18} />
                       Enquire on WhatsApp
                       <FiArrowRight size={16} />
                     </a>
