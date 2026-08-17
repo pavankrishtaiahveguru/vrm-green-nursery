@@ -147,25 +147,7 @@ export default function Hero() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/45 via-transparent to-transparent" />
 
-              {/* Image Badge */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="rounded-2xl border border-white/30 bg-white/90 p-4 shadow-lg backdrop-blur-md sm:p-5">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#0DA855]">
-                        Our Specialty
-                      </p>
-                      <p className="mt-1 text-base font-bold text-[#173026] sm:text-lg">
-                        Quality Coconut Plants
-                      </p>
-                    </div>
-
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0DA855]/10 text-xl">
-                      🌴
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
 
