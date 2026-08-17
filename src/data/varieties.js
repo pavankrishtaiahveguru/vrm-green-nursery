@@ -87,8 +87,8 @@ const varieties = [
     category: "Hybrid Coconut",
 
     images: [
-      "/images/varieties/d-t-coconut/01.jpg",
       "/images/varieties/d-t-coconut/02.jpg",
+      "/images/varieties/d-t-coconut/01.jpg",
       "/images/varieties/d-t-coconut/03.jpg",
       "/images/varieties/d-t-coconut/04.jpg",
     ],

@@ -155,19 +155,19 @@ export default function Varieties() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#173026]/55 via-transparent to-transparent" />
 
                     {/* Category */}
-                    <div className="absolute left-2.5 top-2.5 max-w-[55%] truncate rounded-full border border-white/30 bg-white/90 px-2 py-1 text-[7px] font-semibold text-[#0DA855] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:max-w-none sm:px-3 sm:py-1.5 sm:text-xs">
+                    {/* <div className="absolute left-2.5 top-2.5 max-w-[55%] truncate rounded-full border border-white/30 bg-white/90 px-2 py-1 text-[7px] font-semibold text-[#0DA855] shadow-sm backdrop-blur-md sm:left-4 sm:top-4 sm:max-w-none sm:px-3 sm:py-1.5 sm:text-xs">
                       {variety.category}
-                    </div>
+                    </div> */}
 
                     {/* Image Count */}
-                    {variety.images?.length > 1 && (
+                    {/* {variety.images?.length > 1 && (
                       <div className="absolute right-2.5 top-2.5 rounded-full bg-[#173026]/75 px-2 py-1 text-[7px] font-semibold text-white backdrop-blur-md sm:right-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-xs">
                         {variety.images.length} Photos
                       </div>
-                    )}
+                    )} */}
 
                     {/* Production Info */}
-                    {productionFeature && (
+                    {/* {productionFeature && (
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4">
                         <div className="rounded-lg border border-white/20 bg-white/90 px-2.5 py-2 shadow-lg backdrop-blur-md sm:rounded-xl sm:px-4 sm:py-3">
                           <p className="text-[6px] font-semibold uppercase tracking-[0.08em] text-[#587067] sm:text-[10px] sm:tracking-[0.12em]">
@@ -179,7 +179,7 @@ export default function Varieties() {
                           </p>
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </div>
 
                   {/* Card Content */}
@@ -195,12 +195,12 @@ export default function Varieties() {
                     </h3>
 
                     {/* Description */}
-                    <p className="mt-2 min-h-[48px] line-clamp-3 text-[10px] leading-4 text-[#587067] sm:mt-3 sm:min-h-[72px] sm:text-sm sm:leading-6">
+                    <p className="mt-2 min-h-[48px] line-clamp-3 text-[10px] leading-4 text-[#587067] sm:mt-2 sm:min-h-[72px] sm:text-sm sm:leading-6">
                       {variety.shortDescription}
                     </p>
 
                     {/* Quick Info */}
-                    <div className="mt-3 grid grid-cols-2 items-stretch gap-1.5 sm:mt-5 sm:gap-2">
+                    <div className="mt-3 grid grid-cols-2 items-stretch gap-1.5 sm:mt-3 sm:gap-2">
                       {/* Category */}
                       <div className="flex min-h-[76px] flex-col rounded-lg bg-[#F2FAF5] p-2 sm:min-h-[100px] sm:rounded-xl sm:p-3">
                         <p className="text-[8px] uppercase tracking-wide text-[#587067] sm:text-[10px]">
