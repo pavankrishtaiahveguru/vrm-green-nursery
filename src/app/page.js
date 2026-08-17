@@ -10,8 +10,8 @@ const page = () => {
   return (
     <>
       <Hero />
-      <About />
       <Varieties />
+      <About />
       <Services />
       <DemoFarm />
       <CTA />
